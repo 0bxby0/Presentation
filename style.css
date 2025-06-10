@@ -1,0 +1,188 @@
+/* Variables de couleurs pour modifier facilement */
+:root {
+    --lavande-clair: #e1bee7; /* Violet lavande */
+    --rose: #f48fb1;
+    --violet-fonce: #6a1b9a;
+    --blanc: #ffffff;
+    --texte-gris: #4a4a4a;
+    --fond-page: #f9f4f9;
+}
+
+/* Style général du corps de la page */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background-color: var(--fond-page); Supprimé pour utiliser l'image */
+    background-image: url('img/unnamed.jpg'); /* Assurez-vous que le chemin est correct */
+    background-size: auto; /* L'image garde sa taille originale */
+    background-position: top left; /* L'image commence en haut à gauche (ou ajustez selon besoin) */
+    background-repeat: repeat; /* L'image se répète horizontalement et verticalement */
+    color: var(--texte-gris);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* La carte principale qui contient tout */
+.card {
+    background-color: var(--blanc);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden; /* Pour que le dégradé ne dépasse pas les coins arrondis */
+}
+
+/* En-tête avec le dégradé */
+.header {
+    background: linear-gradient(135deg, var(--lavande-clair), var(--rose));
+    color: var(--blanc);
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.profile-picture {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid var(--blanc);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Assure que l'image remplit le cercle sans être déformée */
+    margin-bottom: 1rem;
+}
+
+.header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.header .subtitle {
+    margin: 0.5rem 0 0;
+    font-weight: 300;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Contenu principal (sections) */
+.content {
+    padding: 2rem 3rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: var(--violet-fonce);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Petite barre décorative sous les titres h2 */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--lavande-clair), var(--rose));
+    border-radius: 2px;
+}
+
+/* Grille pour les passions */
+.passions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.passion-item {
+    background-color: #fafafa;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.passion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.passion-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.passion-item h3 {
+    color: var(--violet-fonce);
+    margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.passion-item p {
+    font-size: 0.9rem;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+}
+
+/* Section contact */
+.discord-tag {
+    background-color: var(--violet-fonce);
+    color: var(--blanc);
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Pied de page */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+/* Adaptation pour les écrans plus petits (mobiles) */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+    .card {
+        border-radius: 0;
+    }
+    .content {
+        padding: 1.5rem;
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+    .header .subtitle {
+        font-size: 1rem;
+    }
+}
+
+.social-links {
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 100px;
+    height: 100px;
+}
