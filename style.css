@@ -8,7 +8,7 @@
     --fond-page: #f9f4f9;
 }
 
-/* Style général du corps de la page */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-image: url('img/unnamed.jpg');
@@ -24,7 +24,7 @@ body {
     margin: 0;
 }
 
-/* La carte principale qui contient tout */
+
 .card {
     background-color: var(--blanc);
     border-radius: 20px;
@@ -34,7 +34,7 @@ body {
     overflow: hidden;
 }
 
-/* En-tête avec le dégradé */
+
 .header {
     background: linear-gradient(135deg, var(--lavande-clair), var(--rose));
     color: var(--blanc);
@@ -67,7 +67,7 @@ body {
     opacity: 0.9;
 }
 
-/* Contenu principal (sections) */
+
 .content {
     padding: 2rem 3rem;
 }
@@ -85,7 +85,7 @@ section h2 {
     display: inline-block;
 }
 
-/* Petite barre décorative sous les titres h2 */
+
 section h2::after {
     content: '';
     position: absolute;
@@ -98,7 +98,7 @@ section h2::after {
     border-radius: 2px;
 }
 
-/* Grille pour les passions */
+
 .passions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -136,7 +136,7 @@ section h2::after {
     margin: 0;
 }
 
-/* Section contact */
+
 .discord-tag {
     background-color: var(--violet-fonce);
     color: var(--blanc);
@@ -147,7 +147,7 @@ section h2::after {
     margin-top: 1rem;
 }
 
-/* Pied de page */
+
 .footer {
     text-align: center;
     padding: 1.5rem;
@@ -155,7 +155,7 @@ section h2::after {
     font-size: 0.9rem;
 }
 
-/* Adaptation pour les écrans plus petits (mobiles) */
+
 @media (max-width: 600px) {
     body {
         padding: 0;
